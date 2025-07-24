@@ -1,0 +1,26 @@
+[
+    {
+        "Username": "standard_user",
+        "Password": "secret_sauce",
+        "url" : "https://www.saucedemo.com/",
+        "homepagetitle" : "Swag Labs" ,
+        "productNamesArray": [ "Sauce Labs Backpack",  "Sauce Labs Fleece Jacket",  "Sauce Labs Onesie",  "Sauce Labs Bike Light"],
+        "FirstName" : "Rajani",
+        "LastName" : "Rithvin",
+        "zipcode" : "523410",
+        "Order_Confirmation_Msg" : "Thank you for your order"  
+    },
+    
+    {
+        "Username": "visual_user",
+        "Password": "secret_sauce",
+        "url" : "https://www.saucedemo.com/",
+        "homepagetitle" : "Swag Labs" ,
+        "productNamesArray": [ "Sauce Labs Fleece Jacket",  "Sauce Labs Bolt T-Shirt",  "Sauce Labs Bike Light"],
+        "FirstName" : "Nithya",
+        "LastName" : "Kushal",
+        "zipcode" : "78965",
+        "Order_Confirmation_Msg" : "Thank you for your order"  
+    }
+    
+]

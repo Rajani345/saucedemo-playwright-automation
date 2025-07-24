@@ -1,0 +1,373 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "error-validation;login-validation",
+        "keyword": "Scenario Outline",
+        "line": 9,
+        "name": "Login Validation",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 713195600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am logged into the application with \"standar_user\" and password \"secre_sauce\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1192663897
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "Verify error messge validation",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24592099
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 254456900
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Validation",
+            "line": 2
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "error-validation;login-validation",
+        "keyword": "Scenario Outline",
+        "line": 10,
+        "name": "Login Validation",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 631010000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am logged into the application with \"error_user\" and password \"secre_sauce\"",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1028538899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "Verify error messge validation",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17272599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 227428199
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Validation",
+            "line": 2
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "error-validation",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Error Validation",
+    "tags": [],
+    "uri": "features\\step_definitions\\ErrorValidation.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "swaglab-order-process-validation;successful-order-creation",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Successful Order Creation",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 704340400
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "url",
+                      "https://www.saucedemo.com/"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "homePage_Title",
+                      "Swag Labs"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "username",
+                      "standard_user"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "password",
+                      "secret_sauce"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am logged into the application with valid credentials",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1156816999
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "product_name"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Sauce Labs Backpack"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Sauce Labs Bike Light"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I add the following products to the cart",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 196818200
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "product_name"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Sauce Labs Backpack"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Sauce Labs Bike Light"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I should see the following products in the cart",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 68360397
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "first_name",
+                      "Rajani"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "last_name",
+                      "Rithvin"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "postal_code",
+                      "12345"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I enter the customer details",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 89716697
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "product_name"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Sauce Labs Backpack"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Sauce Labs Bike Light"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "I should see the correct products on the overview page",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 64338298
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Order_Confirmation_Msg",
+                      "Thank you for your order"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "I place the order successfully",
+            "match": {
+              "location": "features\\step_definitions\\orderSteps.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8377998
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 296768500
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Regression",
+            "line": 2
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "swaglab-order-process-validation",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Swaglab Order Process Validation",
+    "tags": [],
+    "uri": "features\\swagLab_Order.feature"
+  }
+]

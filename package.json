@@ -1,0 +1,24 @@
+{
+  "name": "raj",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test1": "npx playwright test Swaglab.spec.js",
+    "report": "allure generate ./allure-results --clean -o ./allure-report && allure open ./allure-report",
+    "test": "npx cucumber-js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.53.1",
+    "@types/node": "^24.0.3",
+    "allure-playwright": "^3.3.0",
+    "multiple-cucumber-html-reporter": "^3.9.3"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^11.3.0",
+    "exceljs": "^4.4.0"
+  }
+}

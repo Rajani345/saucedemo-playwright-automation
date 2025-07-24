@@ -1,0 +1,12 @@
+[
+  'Sauce Labs Backpack',
+  'Sauce Labs Bike Light',
+  'Sauce Labs Bolt T-Shirt',
+  'Sauce Labs Fleece Jacket',
+  'Sauce Labs Onesie',
+  'Test.allTheThings() T-Shirt (Red)'
+]
+Products Count;  6
+Selected product price: $59.79
+Selected product price: $55.9
+Selected product price: $17.22
