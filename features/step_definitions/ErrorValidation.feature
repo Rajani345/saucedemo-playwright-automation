@@ -7,4 +7,4 @@ Feature: Error Validation
     Examples: 
     |Username     | Password   |
     |standar_user |secre_sauce |
-    |error_user   |secre_sauce |
+    |error_user   |wrongpasswo |
