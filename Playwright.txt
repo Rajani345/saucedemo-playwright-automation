@@ -1,0 +1,152 @@
+PLAYWRIGHT
+================
+1.Install Node js
+2.Install Visual studio
+3.Create folder in any drive 
+4.Open visual studio 
+	--- Drag and drop above folder 
+	--- Open Terminal
+	--- Enter this cmd   npm init playwright@latest
+	--- Ok to proceed? (y) - Y
+	---  Do you want to use TypeScript or JavaScript? · JavaScript
+	---	 Where to put your end-to-end tests? · Rajani ENTER ANY NAME
+	---	 Add a GitHub Actions workflow? (y/N) · false 
+	---	 Install Playwright browsers (can be done manually via 'npx playwright install')? (Y/n) · true
+5. If browsers are not installed please use below cmd
+	set NODE_TLS_REJECT_UNAUTHORIZED=0
+
+Run Commands;
+==========================
+6. Runs all tests on all browsers in Headless mode
+   npx playwright test
+7.Starts the interactive UI mode.
+	 npx playwright test --ui
+8.npx playwright test --project=chromium
+    Runs the tests only on Desktop Chrome.
+9. npx playwright test example
+    Runs the tests in a specific file.
+10. npx playwright test --debug
+    Runs the tests in debug mode.
+11. npx playwright codegen
+    Auto generate tests with Codegen.
+12. To open last HTML report run:
+	npx playwright show-report
+13.npx playwright test --project=chromium --headed
+	Run the test in headed mode
+14.npx playwright test --project=chromium --headed --debug
+	Run the test in headed mode	
+15.npx playwright test --grep @smoke
+	Run only @smoke tag testcases
+	
+Locate elements in PLAYWRIGHT
+==================================
+css selector 
+prperty
+xpath
+
+page.click('propertyname= propertyvalue')
+page.fill('locator', 'value') or page.type('locator', 'value')
+
+Multiple webelements;
+==============================
+const listmodules = await page.$$("//*[contains(@class,'expanded-class')]")
+
+for(const listmodule of listmodules)
+{
+   const modlist =  await listmodule.textContent()
+   console.log(modlist);
+   if (modlist.trim() === 'CHANGE MANAGEMENT') {
+    await listmodule.click();
+   }
+}
+
+
+
+Config;
+=================
+export default defineConfig({
+  testDir: './Rajani',
+  timeout: 30 * 1000,
+  expect: {
+    timeout: 30 * 1000,
+  },
+   reporter: 'html',
+   use: {
+   
+    //trace: 'on-first-retry',
+    headless: false,
+    screenshot: 'on',
+    trace: 'on'
+   
+  },
+  /* Configure projects for major browsers */
+  projects: [
+    {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
+    },
+	
+	
+
+Explanation;
+=================================================
+ const [newPage]=await Promise.all(
+[
+ context.waitForEvent('page'),//listen for any new page pending,rejected,fulfilled
+ documentLink.click(),
+])
+
+promise.all(): method is uses to run two asyncronousoperations parallelly
+context.waitforevevent('page')- Listening for a new page events and click on the link/action.
+This ensures that the code wait for the newpage to load after the click, thus coordinating both actions effectively.
+
+
+browser.newContext();
+===============================
+creates new browser context for isolated sessions means cookies and sessions will not interfere with each other.
+
+Async and await;
+==========================
+using await with async fuctionallows you to puase the execution of the script untill the promise returned by the asychronous function is resolved, 
+preventing potentialtiming issues and allow proper flow in your test
+
+
+Report results;
+===========================
+Playwright-report --> idex.html--> right click copy path --> open in any broser ---> download the trace zip file
+https://trace.playwright.dev/ --- browser the zip files
+
+Hard Assertions; if any hard assertion failed , it terminates the code/execution
+===================
+1.expect(page).toHaveURL('HHTPP//WWW.GMAIL.COM'') - VERIFY URL OF THE APPLICATION
+2.expect(page).toHaveTitle('Gmail')  -   VERIFY title OF THE APPLICATION
+3.expet(page.Locator).toBeVisible() - Element is visible 
+4.expect(page.locator).toBeEnabled() - verify the element is enabled
+5.expect(page.locator).toBeDisabled() -  verify the element is disabled
+6.expect(Page.locator).toBeChecked() - verify radio button or checkbox is checked
+7.expect(page.locator).toHaveAttribute(propertyname,propertyvalue) - verify particular attribute 
+8.expect(page.locator).toHaveText('sampletext')  - Verify the same full text is available in application
+9.expect(page.locator).toContainText('substring') - verify the partial text from the application
+10.expect(page.locator).toHaveValue('rajani@gmail.com) - verify the textbox is have same value or not.
+11.expect(page.locator).toHaveCount(13) - verify the list of elements lenth is same or not
+
+Soft Assertions; if any soft assertion failed , it fails the particular step and continue the execution
+==================
+use soft keyword
+1.expect.soft(page).toHaveURL('HHTPP//WWW.GMAIL.COM'') - VERIFY URL OF THE APPLICATION
+2.expect.soft(page).toHaveTitle('Gmail')  -   VERIFY title OF THE APPLICATION
+3.expect.soft(page.Locator).toBeVisible() - Element is visible 
+4.expect.soft(page.locator).toBeEnabled() - verify the element is enabled
+
+
+ ExcelJSUTILL;
+ ===================
+ Terminal -->mkdir ExcelJSUtill---->cd ExcelJSUtill --->npm init -->npm install exceljs --savedev
+ 
+ Run Parelley;
+ =====================
+ test.describe.configure({mode:'parallel'})    ///Run below test parelley
+ test.describe.configure({mode:'serial'})    ///Run below test serial one by one if any test fail other test will not run
+  test.describe.configure({mode:'default'})    ///Run below test serial
+  
+  

@@ -1,0 +1,369 @@
+pritn the output in console use below method
+========================================
+Console.log("print the output", c);
+
+
+Variables in JAVASCRIPT;
+===============================
+Let, Const and  var //var is not used for latest versions
+Var = Global level/Fuction level (Can be redeclared and reinitialized
+let = global level/ block level (Can't be redeclared but reinitialized)
+Const = global level/ block level (Can't be redeclared and reinitialized)
+
+eg;
+var name = 'Rajani'
+var name = 'Rajaesh'     ///Redeclared with same variable and variable name
+name = 'Ramya'         //reinitialized with variable name
+
+eg;
+let c = "Rajani"
+let c = a+b;
+when execute it throughs an error because we cannot redeclare a variable using LET keyword
+if u use VAR
+var c = "Rajani"
+var c = a+b;
+when execute it doesnot throughs an error because we are redeclare a variable using VAR keyword
+but there is an option to user LET keyword using reassigning
+let c = "Rajani"
+c = a+b;
+when execute it doesnot throughs any error because we are reassigning  a variable using LET keyword
+CONST d = "Rajani"
+for CONST Keyword we cannot redefined or reeclared or reassigned beacuse its a constant variable
+
+
+print the type of the variable;
+===================================
+let a = 4;
+console.log(typeof(a));    //Output;Number
+
+let b=234.6
+console.log(typeof(b));    //Output;number
+
+let name="Rajani"
+console.log(typeof(name));    //Output;string
+
+let booleanvalue= true
+console.log(typeof(booleanvalue));    //Output;Boolean
+console.log(booleanvalue);    //Output;true
+console.log(!booleanvalue);    //Output;false
+
+let c= a+b
+console.log(c);    //Output;238.6
+
+
+IF STATEMENT;
+========================
+const flag = true
+if (flag)
+{
+	console.log(flag)
+	console.log("condition satisfied")
+}
+else
+{
+	console.log(flag)
+	console.log("condition not satisfied")
+}
+output: true
+=======	condition satisfied
+		
+if (!flag)
+{
+	console.log(flag)
+	console.log("condition satisfied")
+}
+else
+{
+	console.log(flag)
+	console.log("condition not satisfied")
+}
+output: false
+=======	condition not satisfied	
+
+
+while loop; 
+============================
+first check the condition and execute the statements
+while(true)
+{
+	console.log("i am inside the loop ")
+}
+OUTPUT; i am inside the loop
+		i am inside the loop
+		i am inside the loop..........loop continues to infinite times beecause the condition is true 
+for eg; 
+let i=0;
+while(i<10)
+{
+	i++;
+	console.log("I am inside the loop untill condition is false",i)
+}
+output:  I am inside the loop untill condition is false 1
+		 I am inside the loop untill condition is false 2
+		 I am inside the loop untill condition is false 3......10
+for eg;
+let i=0;
+while(i>10)
+{
+	i++;
+	console.log("I am inside the loop untill condition is false",i)
+}
+output: output is empty because the condition false
+
+
+do while loop; 
+============================
+first execute the statements and then check the condition
+do
+{
+	i++;
+	console.log("I am
+	inside the loop untill condition is false",i)
+}while(i<10)
+output:  I am inside the loop untill condition is false 1
+		 I am inside the loop untill condition is false 2
+		 I am inside the loop untill condition is false 3......10
+eg;
+do
+{
+	i++;
+	console.log("I am inside the loop untill condition is false",i)
+}while(i>10)
+output:  I am inside the loop untill condition is false 1 --.> for next iteration condition false
+
+
+For loop:
+===================
+for(let i=0;i<10;i++)
+{
+	console.log(i);
+}
+output;0
+		1
+		2
+		3....9
+
+eg: from 1to 10 give the multiples of 2 and 5
+for (i=0;i<=10;i++)
+{
+	if(i%2==0 && i%5==0)     1st codition output is 2, 4, 6, 8, 10  and 2nd condition output is 5,10
+	{
+		console.log(i)
+	}
+}
+Output: 10
+
+
+
+
+Arrays concept:
+====================
+var marks = array(6)
+var marks = new array(20,40,12,35,75,100)
+0r
+var marks = [20,40,12,35,75,100]
+
+//print the array values
+console.log(marks);   //output:[20,40,12,35,75,100]
+
+//get the value based on index
+console.log("print the 2nd index array", marks[2])       //Output ; 12
+
+//get the index based on value
+console.log(marks.indexof(100))       //Output ; 5
+
+//Verif the value exist or not in array
+console.log(marks.includes(120))     //output ; false
+
+//pringt length or size of an array
+console.log(marks.length) //output: 6
+
+//modified array  value
+marks[2] = 50
+console.log("print the updated marks", marks) //output:[20,40,50,35,75,100]
+
+//add element to the array
+marks.push(85);
+console.log("print the marks", marks) //output:[20,40,50,35,75,100,85]
+
+//Delete/remove  an last element of an array
+marks.pop();
+console.log("print the  marks", marks) //output:[20,40,50,35,75,100]
+
+//Change the position of marks value to starting
+marks.unshift(75)
+console.log("print the  marks", marks) //output:[75,20,40,50,35,100]
+
+//split the array like subarray
+subarray = marks.slice(2,5);
+console.log(subarray);
+
+//use loop to print all individual marks and total marks
+var sum = 0;
+for(let i = 0;i<marks.length;i++)
+{
+	consol.log(marks[i])
+	sum = sum+marks[i];
+}
+console.log(sum);
+	((or))
+sigle line code for looping
+totalmarks = marks.reduce((sum,total)=>(sum+total,0))
+console.log(totalmarks);
+
+
+//Create new array with evennumber of scores
+method 1;
+var scores = [10,12,13,14,16]
+var evenscores = []
+for(let i=0;i<scores.length;i++)
+{
+	if (scores[i]%2==0)
+	{
+		evenscores.push(scores[i])
+	}
+}
+console.log(evenscores);
+output; [10,12,14,16]
+      ((or))
+let evenscores = scores.filter(scores=>Scores%2)
+console.log(evenscores);
+output; [10,12,14,16]
+
+scenari0; multiply the output wit 3
+let maparray =  evenscores.map(scores=>scores*3)
+console.log(maparray);
+output; [30,36,52,48]
+
+scenario; sum the output
+let sumoutput = maparray.reduce(sum,val)=>(sum+val,0)
+console.log(sumoutput);
+output; 166
+
+(((or)))
+write whole code in asingle line
+let sumoutput = scores.filter(scores=>Scores%2).map(scores=>scores*3).reduce(sum,val)=>(sum+val,0)
+console.log(sumoutput);
+output; 166
+
+
+Reduce method : iterate and update new value
+Filter method ; filter your array based on condition 
+Map method : maps to a new elements
+
+sorting the array;
+===========================
+let fruits = ["Banana","Mango","apple","pear"]
+fruits.sort();
+console.log(fruits);
+output;["apple","Banana","Mango","pear"]
+
+let nums = [12,15,13,16,14]
+nums.sort();
+console.log(nums);
+output;[12,13,14,15,16]
+
+let nums = [12,005,13,16,14]
+console.log(nums.sort((a,b)=>a-b);  bubble sort 
+output;[5,12,13,14,16]
+
+
+Functions;
+========================
+function add(a,b)
+{
+	return a+b
+}
+let sum  = add(2,3)
+console.log(sum)
+	
+	(((or))) 
+//without functionaname use anonymous functions
+let sumoftwointegers = function(a,b)
+{
+	return a+b
+}
+		
+  (((or)))
+let sumoftwointegers = (a,b)=>a+b
+console.log(sumoftwointegers(2,3)
+
+
+String Operations;
+========================
+let str = "Rajani "
+
+get the first character;
+=======================
+console.log(str[1]);
+
+length of the string;
+======================
+console.log(str.length);  //Output; 7
+
+substring of the string;
+=============================
+console.log(str.slice(3,6))  //output; jani 
+
+split the string;
+================
+let splitval = str.split("j")
+console.log(splitval(0))     //output; ra
+console.log(splitval(0))     //output; ani 
+
+trim the spaces;
+==========================
+console.log(str.trim())    //output; Rajani
+console.log(str.length);  //Output; 6
+
+Difference of 2 numbers;
+=============================
+a = '23'
+b = '26'
+let diff = parseint(a)-parcseint(b)
+console.log(diff);
+convert result int to string
+diff.tostring()
+
+Concatenate the string;
+============================
+str = 'Rajani'
+str2 = 'Pavuluru'
+let res = str+str1
+console.log(res)
+
+index of the substring;
+===========================
+console.log(res.indexof(pavu))    //output; 6
+
+object;
+==================
+it is a collection of properties
+
+let person = {
+	firstname: 'Rajani',
+	Lastname: 'Pavuluru'
+}
+console.log(person.firstname);  //output; Rajani
+
+//modified the latname 
+person.lastname = 'Thummala'
+console.log(person.lastname);  //output; Thummala
+
+//add person property
+person.gender = 'female'
+console.log(person)  ///output ; [firstname: 'Rajani', Lastname: 'Thummala', gender; 'Female']
+
+//delete the property;
+delete person.gender;  
+console.log(person) ///output ; [firstname: 'Rajani', Lastname: 'Thummala']
+
+
+
+
+
+
+
+
+
+
