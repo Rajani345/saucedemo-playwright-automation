@@ -13,7 +13,7 @@ import { defineConfig, devices } from '@playwright/test';
  * @see https://playwright.dev/docs/test-configuration
  */
 export default defineConfig({
-  testDir: './Rajani',
+  testDir: './tests',
   timeout: 60 * 1000,
   expect: {
     timeout: 30 * 1000,
